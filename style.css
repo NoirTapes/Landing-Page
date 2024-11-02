@@ -1,16 +1,22 @@
 body{
+    /* This will set the overall nature. 
+    So, flex column, no margins and roboto font.*/
     display: flex;
     flex-direction: column;
     margin: 0;
     font: Roboto;
 }
 p{
-    margin-top: auto;
-    margin-bottom: auto;
+    /*This will remove the preset margins from the p elements*/
+    margin: 0;
+    /*This is the font-size of p*/
+    font-size: 18px;
+    
 }
 h1{
-    margin-top: auto;
-    margin-bottom: auto;
+    /*This will remove the preset margins from the h1 elements*/
+    margin: 0;
+    /* This is the styling of the h1 elements*/
     font-size: 48px;
     color: #F9FAF8;
     font-weight: 900;
@@ -18,34 +24,41 @@ h1{
 }
 
 h2{ 
-    margin-top: auto;
-    margin-bottom: auto;
+    /*This will remove the preset margins from the h2 elements*/
+    margin: 0;
+    /* This is the styling of the h2 elements*/
     font-size: 36px;
     columns: #1F2937;
     font-weight: 900;
 }
 
 h3{
-    margin-top: auto;
-    margin-bottom: auto;
+    /*This will remove the preset margins from the h3 elements*/
+    margin: 0;
+    /* This is the styling of the h3 elements*/
     font-size: 24px;
     color: #F9FAF8;
 }
 
 h4, li{
-    margin-top: auto;
-    margin-bottom: auto;
+    /*This will remove the preset margins from the h4 and li elements*/
+    margin: 0;
+    /* This is the styling of the h4 and li elements*/
     font-size: 18px;
     color: #E5E7EB;
+    /*This line removes the dot points from the list*/
     list-style-type: none;
 }
 
 a{
+    /*This remove the color from the hyperlinks and under lines.*/
     color: inherit;
     text-decoration: none;
 }
 
 ul{
+    /*This turns the unordered list into a flex item and adds a gap between 
+    the elements*/
     display: flex;
     gap: 20px;
 }
@@ -53,56 +66,76 @@ ul{
 /*HEADER*/
 
 .header{
+    /*This sets the colors*/
     background-color: #1F2937;
     color: white;
     
+    /*Making the overall header a flex item, column direction. 
+    Adding padding on either side to push the content off the edge*/
     display: flex;
     flex-direction: column;
     padding-left: 100px;
     padding-right: 100px;
-    flex-grow: 1;
 }
 
 .row1{
+    /*This makes the first row a flex item and sets it to space-between
+    which puts the content on either end
+    and also aligns the vertical to center*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*Added a little padding to the bottom too.*/
     padding-bottom: 50px;
 }
 
 .row2{
+    /*This makes the second row a flex item set to space-between to put
+    the content on either end*/
     display: flex;
     justify-content: space-between;
+    /*Added a little padding to the bottom too.*/
     padding-bottom: 100px;
 }
 
 .row2content{
-    
+    /*This makes the second rows content a flex item
+    direction column and addeds flex grow, so it will grow to 
+    available space with the placeholder.*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 400px; 
     flex-grow: 1;
+    /*Setting a fixed width to the content to mimic the result*/
+    width: 400px; 
+    /*Adding subtle padding to squish the text to acheive the result
+    and a small gap between the content vertically.*/
     padding-right: 50px;
     gap: 10px;
 }
 
 .placeholder{
-    width: 500px;
-    height: auto;
-    background-color: rgb(137, 137, 137);
+    /*Making this a flex item, moving the text to the center and adding 
+    flex grow so it competes for availabe space with the content.*/
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    /*Setting a fixed width to achieve the result*/
+    width: 500px;
+    /*Setting the background color*/
+    background-color: rgb(137, 137, 137);
+    
 }
 
 button{
-
+    /*Setting the width and
+    padding to push it off the edge of the flex box*/
     width: 100px;
     padding: 4px;
+    /*styling*/
     color: #E5E7EB;
     background-color: #3882F6;
+    /*This makes the border invisible, and makes curves the corners.*/
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -113,44 +146,76 @@ button{
 /*INFO SECTION*/
 
 .box{
+    /*This sets a height and width and outline*/
     width: 150px;
     height: 150px;
     outline: solid #3882F6 3px;
+    /*This makes the box corners curve.*/
     border-radius:12px;
     cursor: pointer;
 }
 
 .info{
+    /*This sets the height of the section*/
+    height: 450px;
+    /*This makes the whole info section a flex item
+    direction column with all the content vertically and horizontally centered.*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 250px;
-    padding-right: 250px;
 }
 
 .illus-box{
+    /*This make the boxes group a flex item with a gap of 50px*/
     display: flex;
-    justify-content: space-evenly;
     gap: 50px; 
+    /*This adds padding for the top and bottom*/
     padding-top: 50px;
-    flex-shrink: 0;
+    padding-bottom: 10px;
 }
 
 .subtexts{
+    /*This sets a fixed width*/
+    width: 750px;
+    /*This makes the subtexts a flex item with a gap of 50px*/
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     gap: 50px;
-    flex: 1 1 auto;
-
-    text-align: center;
-    padding-top: 10px;
+    /* This makes the text meet the common edge and aligns the last line*/
+    text-align: justify;
+    text-align-last: center;
 }
 
 /*QUOTE SECTION*/
+.quote-section{
+    /*This sets the height of the section*/
+    height: 450px;
+    /*This makes it a flex item, column orientation and centering content*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*This sets the background color*/
+    background-color: #E5E7EB;
+}
 
+.quote{
+    /*This sets the width to match the above section*/
+    width: 750px;
+    /*This sets the styling*/
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: light;
+    font-style: italic;
+}
+.quote-subtext{
+    /*This sets the width to match the above section*/
+    width: 750px;
+    /*This aligns the text at the end of the width*/
+    text-align: end;
+    /*This sets the styling*/
+    font-size: 24px;
+    font-weight: bolder;
+}
 
+/*CALL TO ACTION SECTION*/
