@@ -281,3 +281,17 @@ button{
 }
 
 /*FOOTER*/
+
+.footer{
+    /*Setting height*/
+    height:80px;
+    /*Making flex, centering content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Adding subtle space between words*/
+    word-spacing: 3px;
+    /*Styling*/
+    background-color: #1F2937;
+    color: white   
+}
